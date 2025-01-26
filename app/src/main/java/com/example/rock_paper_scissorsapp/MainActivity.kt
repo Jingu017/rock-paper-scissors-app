@@ -50,10 +50,23 @@ fun GreetingPreview() {
 
 @Composable
 fun PlayerView(hand: Int) {
-    Image(
-        painter = painterResource(id = R.drawable.gu),
-        contentDescription = null
-    )
+    if (hand == 0) {
+        Image(
+            painter = painterResource(id = R.drawable.gu),
+            contentDescription = null
+        )
+    } else if (hand == 1) {
+        Image(
+            painter = painterResource(id = R.drawable.choki),
+            contentDescription = null
+        )
+    } else if (hand ==2) {
+        Image(
+            painter = painterResource(id = R.drawable.pa),
+            contentDescription = null
+        )
+    }
+
 }
 
 @Preview(
@@ -62,5 +75,7 @@ fun PlayerView(hand: Int) {
     widthDp = 100, heightDp = 200)
 @Composable
 fun PlayerViewPreview() {
-    PlayerView(1)
+    PlayerView(2)
 }
+
+

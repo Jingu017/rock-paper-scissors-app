@@ -55,3 +55,12 @@ fun PlayerView(hand: Int) {
         contentDescription = null
     )
 }
+
+@Preview(
+    showBackground = true,
+    backgroundColor = 0xFF00FF00,
+    widthDp = 100, heightDp = 200)
+@Composable
+fun PlayerViewPreview() {
+    PlayerView(1)
+}

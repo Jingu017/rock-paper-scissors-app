@@ -78,4 +78,28 @@ fun PlayerViewPreview() {
     PlayerView(2)
 }
 
+@Composable
+fun ComputerView(comHand: Int) {
+    when(comHand) {
+        0 -> Image(
+            painter = painterResource(id = R.drawable.com_gu),
+            contentDescription = null
+        )
+        1 -> Image(
+            painter = painterResource(id = R.drawable.com_choki),
+            contentDescription = null
+        )
+        2 -> Image(
+            painter = painterResource(id = R.drawable.com_pa),
+            contentDescription = null
+        )
+    }
+}
+
+@Preview
+@Composable
+fun ComputerViewPreview() {
+    ComputerView(2)
+}
+
 
